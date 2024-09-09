@@ -1,0 +1,258 @@
+*{
+    /* margin: 0;
+    padding: 0; */
+    box-sizing: border-box;
+    font-family: "Helvetica Neue LT Std 47", Helvetica, sans-serif;
+
+}
+a {
+    color: black;
+    text-decoration: none;
+}
+.header-links{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;   
+}
+.img{
+    z-index: 1;
+    margin-left: 10px;
+}
+.main-img{
+    margin-left: -50px;
+}
+.phone-border{
+    border: 1px solid rgb(89, 122, 213);
+    height: 25px;
+    
+    border-radius: 50px;
+    margin-right: 10px;
+    margin-left: -15px;
+    color: rgb(116, 115, 115);
+    z-index: 0.5;
+}
+.nav-bar{
+    /* border:1px solid black; */
+    /* width: 650px; */
+    margin-left: 100px;
+    display: flex; 
+}
+
+.nav-links{
+    margin-left: 20px;
+    font-size:17px;
+    font-size: 20px;
+}
+button{
+    all: unset;
+}
+.buttons{
+    margin-left: 120px;
+    margin-top:-15px;
+}
+.btn1{
+    border: 2px solid rgb(215, 99, 16);
+    border-radius: 5px;
+    height: 30px;
+    padding: 5px; 
+    font-size: 20px; 
+    box-shadow: inset 0 0 10px rgb(215, 99, 16);
+}
+
+.btn2{
+    background-image: linear-gradient(to bottom, #ec5f67, #b82d35);
+    color: white;
+    border-radius: 5px;
+    height: 30px;
+    padding: 5px; 
+    font-size: 20px; 
+    margin-left: 10px;
+    margin-top: -50px;
+}
+
+.hr{
+    display: flex;
+    margin-left: 50px;
+   
+}
+
+.box-container{
+    width: 1270px;
+    margin-left: 100px; 
+    display: flex;
+    
+    margin-top: 10px;
+}
+#box{
+    width: 240px;
+    border-radius: 5px;
+    height: 50px;
+    font-size: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    color: white;
+}
+
+.box1 {
+    background-image: linear-gradient(to bottom, #1abc9c 40%, #027961 99%);
+    width: 150px;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+     position: relative; 
+} 
+.box2{
+    background-image: linear-gradient(to bottom, #ec5f67 40%, #b82d35);
+}
+.box3{
+   background-image:  linear-gradient(to bottom,#f99157 40%,#d16123);
+}
+
+.box4{
+    background-image: linear-gradient(to bottom, #ab7967 40%, #724b38);
+}
+.box5{
+    background-image: linear-gradient(to bottom, #69c 40%, #316598);
+
+}
+.box6{
+    background-image: linear-gradient(to bottom, #65737e 40%, #343d46 99%);
+}
+
+.login-container {
+    display: none; 
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.box1:hover .login-container {
+    display: block;
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.login-container input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.login-container input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+.lists{
+    list-style: none;
+    margin-top: 10px;
+    font-size: 12px;
+    width: 100%;
+    display: flex;
+    justify-content: left;
+}
+.ul-list{
+    display: flex;
+    justify-content: left;
+    margin-left: -50px;
+}
+
+
+
+/* Container for the images */
+.images-container {
+    margin-top: 30px;
+    margin-left: 100px;
+    width: 1270px; /* Width of a single image */
+    height: 400px; /* Height of a single image */
+    overflow: hidden; /* Hide overflow */
+    position: relative; /* Position relative for absolute positioning of images */
+    background-color: #f1f1f1; /* Background color */
+   
+}
+
+/* Style for each image */
+.images-container img {
+    position: absolute;
+    width: 100%; /* Make sure the images fill the container */
+    height: 100%;
+    opacity: 0; /* Initially hide all images */
+    animation: imageAnimation 16s infinite; /* Animation duration and infinite loop */
+}
+
+/* Keyframes for animating images */
+@keyframes imageAnimation {
+    0% { opacity: 1; } /* Show the image */
+    12.5% { opacity: 1; } /* Keep the image visible */
+    25% { opacity: 0; transform: translateX(-100%); } /* Move the image to the left and hide it */
+    100% { opacity: 0; } /* Keep the image hidden for the rest of the cycle */
+}
+
+/* Timing each image to show one after the other */
+.images-container img:nth-child(1) {
+    animation-delay: 0s;
+}
+.images-container img:nth-child(2) {
+    animation-delay: 4s;
+}
+.images-container img:nth-child(3) {
+    animation-delay: 8s;
+}
+.images-container img:nth-child(4) {
+    animation-delay: 12s;
+}
+.images-container img:nth-child(5) {
+    animation-delay: 16s;
+}
+.images-container img:nth-child(6) {
+    animation-delay: 20s;
+}
+.images-container img:nth-child(7) {
+    animation-delay: 24s;
+}
+.images-container img:nth-child(8) {
+    animation-delay: 28s;
+}
+.images-container img:nth-child(9) {
+    animation-delay: 32s;
+}
+.images-container img:nth-child(10) {
+    animation-delay: 36s;
+}
+.images-container img:nth-child(11) {
+    animation-delay: 40s;
+}
+.images-container img:nth-child(12) {
+    animation-delay: 44s;
+}
+.images-container img:nth-child(13) {
+    animation-delay: 48s;
+}
+.images-container img:nth-child(14) {
+    animation-delay: 52s;
+}
+.images-container img:nth-child(15) {
+    animation-delay: 56s;
+}
+.images-container img:nth-child(16) {
+    animation-delay: 60s;
+}
