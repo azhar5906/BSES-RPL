@@ -182,29 +182,29 @@ button{
 .images-container {
     margin-top: 30px;
     margin-left: 100px;
-    width: 1270px; /* Width of a single image */
-    height: 400px; /* Height of a single image */
-    overflow: hidden; /* Hide overflow */
-    position: relative; /* Position relative for absolute positioning of images */
-    background-color: #f1f1f1; /* Background color */
+    width: 1270px; 
+    height: 400px; 
+    overflow: hidden; 
+    position: relative; 
+    background-color: #f1f1f1;
    
 }
 
-/* Style for each image */
+/* Styling for every image */
 .images-container img {
     position: absolute;
-    width: 100%; /* Make sure the images fill the container */
+    width: 100%; 
     height: 100%;
-    opacity: 0; /* Initially hide all images */
-    animation: imageAnimation 16s infinite; /* Animation duration and infinite loop */
+    opacity: 0; 
+    animation: imageAnimation 16s infinite; 
 }
 
 /* Keyframes for animating images */
 @keyframes imageAnimation {
-    0% { opacity: 1; } /* Show the image */
-    12.5% { opacity: 1; } /* Keep the image visible */
-    25% { opacity: 0; transform: translateX(-100%); } /* Move the image to the left and hide it */
-    100% { opacity: 0; } /* Keep the image hidden for the rest of the cycle */
+    0% { opacity: 1; } 
+    12.5% { opacity: 1; } 
+    25% { opacity: 0; transform: translateX(-100%); } 
+    100% { opacity: 0; }
 }
 
 /* Timing each image to show one after the other */
